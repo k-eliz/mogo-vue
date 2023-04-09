@@ -1,47 +1,56 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <MainHeader />
+  <div class="page">
+    <div class="intro">
+      <div class="intro__inner">
+        <div class="container">
+          <h2 class="intro__subtitle">Creative Template</h2>
+          <h1 class="intro__title">Welcome to MoGo</h1>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+          <a class="btn" href="#">Learn More</a>
+        </div>
+      </div>
+      <div class="slider">
+        <div class="container">
+          <div class="slider__inner">
+            <div class="slider__item active">
+              <span class="slider__num">01</span>
+              <span class="slider__text">Intro</span>
+            </div>
+            <div class="slider__item">
+              <span class="slider__num">02</span>
+              <span class="slider__text">Work</span>
+            </div>
+            <div class="slider__item">
+              <span class="slider__num">03</span>
+              <span class="slider__text">About</span>
+            </div>
+            <div class="slider__item">
+              <span class="slider__num">04</span>
+              <span class="slider__text">Contacts</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <!--intro-->
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script>
+import MainHeader from "./components/MainHeader.vue";
+export default {
+  components: {
+    MainHeader,
+  },
+  data() {
+    return {};
+  },
+};
+</script>
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+<style>
+body {
+  background: #676767;
 }
 </style>
